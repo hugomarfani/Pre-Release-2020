@@ -2,6 +2,8 @@
 
 **CIE iGCSE December 2020 Pre-Release**
 
+[![Run on Repl.it](https://repl.it/badge/github/@A9_marfanih_y16/Pre-Release-2022#main.py)](https://repl.it/@A9_marfanih_y16/Pre-Release-2022#main.py)
+
 Your preparation for the examination should include attempting the following practical tasks by writing and testing a program or programs.
 
 A system is required to record and count votes for candidates in school council elections. The voting system will allow for one representative to be elected from a tutor group. The school has between 28 and 35 students in each tutor group, five year groups named Year 7 to Year 11, and there are six tutor groups in each year group. Tutor group names are their year group followed by a single letter e.g. 7A, 7B, etc.
