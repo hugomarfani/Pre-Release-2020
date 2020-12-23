@@ -4,7 +4,9 @@
 
 [![Run on Repl.it](https://repl.it/badge/github/@A9_marfanih_y16/Pre-Release-2022#main.py)](https://repl.it/@A9_marfanih_y16/Pre-Release-2022#main.py)
 
-<a href="https://manchestergrammarschool.sharepoint.com/sites/Section_2020-7023/_layouts/15/Doc.aspx?sourcedoc={712afe9c-ed87-451f-a10e-8f73454aca37}&action=view&wd=target%28marfanih-y16%2FPre-Release%2FCouncil.one%7C3a14fc72-e12b-4e3c-a7dd-ac41ac23afe3%2FStudent%20Council%20Pre-Release%20Task%7C0464834e-5308-4efb-8e58-160a0f33de5d%2F%29&wdorigin=703"><img src="https://cdn0.iconfinder.com/data/icons/logos-microsoft-office-365/128/Microsoft_Office-06-512.png" align="left" height="20" width="20" ></a><br/>
+<a href="https://manchestergrammarschool.sharepoint.com/sites/Section_2020-7023/_layouts/15/Doc.aspx?sourcedoc={712afe9c-ed87-451f-a10e-8f73454aca37}&action=view&wd=target%28marfanih-y16%2FPre-Release%2FCouncil.one%7C3a14fc72-e12b-4e3c-a7dd-ac41ac23afe3%2FStudent%20Council%20Pre-Release%20Task%7C0464834e-5308-4efb-8e58-160a0f33de5d%2F%29&wdorigin=703"><img src="https://cdn0.iconfinder.com/data/icons/logos-microsoft-office-365/128/Microsoft_Office-06-512.png" align="left" height="20" width="20" ></a> OneNote Planning Page
+
+<br/>
 
 Your preparation for the examination should include attempting the following practical tasks by writing and testing a program or programs.
 
