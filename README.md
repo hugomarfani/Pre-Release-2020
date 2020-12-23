@@ -35,7 +35,7 @@ Setting up the voting system to allow a tutor group to elect a representative. W
 When all students have voted, display the name of the tutor group, the votes for each candidate and the name of the candidate who has won the election. If there is a tie for first place, display all candidates with the equal highest number of votes.
 
 ---
-On
+
 ### Task 2
 
 Checking that students only vote once.
