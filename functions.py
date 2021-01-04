@@ -45,6 +45,7 @@ def studentVoting():
       studentID = str(input("INVALID. This student has already voted.\n\nPlease enter your Student ID Number: "))
       while len(studentID) != 6:
        studentID = str(input("INVALID student ID. Your ID is six digits long. Please enter your Student ID Number: "))
+    
     usedStudentIDs[student] = studentID
 
     print("\nCandidates in the election:: ")
