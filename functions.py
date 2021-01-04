@@ -5,6 +5,7 @@ def tutorSetUp():
   abstainStudentVotes = 0
   #Defines an array with the possible names of the forms
   tutorGroupOptions = ['7A', '7B', '7C', '7D', '7E', '7F', '8A', '8B', '8C', '8D', '8E', '8F', '9A', '9B', '9C', '9D', '9E', '9F', '10A', '10B', '10C', '10D', '10E', '10F', '11A', '11B', '11C', '11D', '11E', '11F']
+  print ('--------------------Tutor Set Up--------------------')
   #Asks and validates the entry of the name of the tutor group
   tutorGroup = str(input('Enter the name of the tutor group: ')).upper()
   while tutorGroup not in tutorGroupOptions:
@@ -31,11 +32,22 @@ def tutorSetUp():
 #Defines a function for each student to cast their vote
 def studentVoting():
   global abstainStudentVotes
+  usedStudentIDs = [''] * tutorGroupNumPupils
   
   #For loop to iterate through every student in the form
   for student in range(tutorGroupNumPupils):
-    print("\nCandidates in the election:: ")
+    
+    #Asks and checks for a valid, unused Student ID
+    studentID = str(input("\nPlease enter your Student ID Number: "))
+    while len(studentID) != 6:
+      studentID = str(input("INVALID student ID. Your ID is six digits long. Please enter your Student ID Number: "))
+    while studentID in usedStudentIDs:
+      studentID = str(input("INVALID. This student has already voted.\n\nPlease enter your Student ID Number: "))
+      while len(studentID) != 6:
+       studentID = str(input("INVALID student ID. Your ID is six digits long. Please enter your Student ID Number: "))
+    usedStudentIDs[student] = studentID
 
+    print("\nCandidates in the election:: ")
     #For loop to print out the options to vote for each of the candidates
     for name in range(len(nameCandidates)):
       print (str(name + 1) + '.', nameCandidates[name])
@@ -68,4 +80,4 @@ def outputWinner():
       winner = nameCandidates[vote]
 
   #Outputs the winner of the election
-  print ('The winner of the election was', winner)
+  print ('\nThe winner of the election was', winner)
