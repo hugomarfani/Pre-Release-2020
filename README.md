@@ -10,7 +10,7 @@
 
 ### About this Git
 
-This is Hugo Marfani’s code for the 2021 CIE iGCSE Pre-Release Task. Each task can be individually accessed from as separate branches of this repository. There are also issues and a project which provide more detailed notes as to how I deconstructed the problem.
+This is Hugo Marfani’s code for the 2020 CIE iGCSE Pre-Release Task. Each task can be individually accessed from as separate branches of this repository. There are also issues and a project which provide more detailed notes as to how I deconstructed the problem.
 
 ---
 
