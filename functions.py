@@ -29,9 +29,11 @@ def tutorSetUp():
     name = str(input("\nEnter the name of the student: ")).title()
     nameCandidates[student] = name
 
+
+
 #Defines a function for each student to cast their vote
 def studentVoting():
-  global abstainStudentVotes
+  global tutorGroupNumPupils, nameCandidates, numOfCandidates, votesCandidates, tutorGroup, abstainStudentVotes
   usedStudentIDs = [''] * tutorGroupNumPupils
   
   #For loop to iterate through every student in the form
@@ -48,7 +50,8 @@ def studentVoting():
     
     usedStudentIDs[student] = studentID
 
-    print("\nCandidates in the election:: ")
+    print('\n--------------------Ballot--------------------')
+    print("\nCandidates in the election:")
     #For loop to print out the options to vote for each of the candidates
     for name in range(len(nameCandidates)):
       print (str(name + 1) + '.', nameCandidates[name])
@@ -63,22 +66,60 @@ def studentVoting():
     else:
       abstainStudentVotes += 1
 
+
+
+#Defines a function to output statistics as well as calculate the winner of the election
 def outputWinner():
+  global tutorGroupNumPupils, nameCandidates, numOfCandidates, votesCandidates, tutorGroup, abstainStudentVotes, tieNum
   winner = ''
   winnerVotes = 0
+  validVotes = 0
   #Outputs the tutor tutor group details
+  print ('\n------------Winner and Statistics------------')
   print ('\nForm:' + tutorGroup)
-  
+
+  for vote in votesCandidates:
+    validVotes += vote
+
   #Outputs the number of votes for each candidate
   for candidate in nameCandidates:
-    print (candidate, 'recived', str(votesCandidates[nameCandidates.index(candidate)]), 'votes')
+    percent = round(votesCandidates[nameCandidates.index(candidate)] / validVotes, 2)*100
+    print (candidate, 'recived', str(votesCandidates[nameCandidates.index(candidate)]), 'votes, this is', str(percent) + '%')
 
+  #Outputs Voting Data
+  print (str(validVotes), 'people placed votes for a candidate')
+  print (str(tutorGroupNumPupils - validVotes), 'people abstained from voting')
 
   #Checks who won the election
+  tie = []
+  tieNum = votesCandidates[0]
+  tieTag = False
+
   for vote in range(len(votesCandidates)):
     if votesCandidates[vote] > winnerVotes:
       winnerVotes = votesCandidates[vote]
       winner = nameCandidates[vote]
+    if votesCandidates[vote] == tieNum:
+      tie.append(nameCandidates[vote])
+      tieNum = votesCandidates[vote]
+      tieTag = True
+  
+  if tieNum > winnerVotes or len(tie) == 1:
+    tieTag = False
+  
+  if tieTag == False:
+    #Outputs the winner of the election
+    print ('\nThe winner of the election was', winner)
 
-  #Outputs the winner of the election
-  print ('\nThe winner of the election was', winner)
+  while tieTag:
+    numOfCandidates = len(tie)
+    nameCandidates = tie
+    votesCandidates = [0] * (numOfCandidates)
+    abstainStudentVotes = 0
+    usedStudentIDs = [''] * tutorGroupNumPupils
+    print ('\n-----------Tie - Rerunning Election-----------')
+    tie = []
+    tieNum = votesCandidates[0]
+    tieTag = False
+    studentVoting()
+    outputWinner()
